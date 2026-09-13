@@ -236,7 +236,7 @@ with col_result:
     st.markdown("#### Live Analysis Result")
 
     if analyze_button and uploaded_file is not None:
-        with st.spinner("Analyzing image features via API..."):
+        with st.spinner("Analyzing image..."):
             try:
                 files = {"file": (uploaded_file.name, uploaded_file.getvalue(), uploaded_file.type)}
                 response = requests.post(f"{API_URL}/predict", files=files)
